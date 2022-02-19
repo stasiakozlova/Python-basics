@@ -1,3 +1,5 @@
 def solution(n, k):
-    ### YOUR CODE HERE ###
+    a = k // n
+    b = k % n
+    print(f'{a}, {b}')
     return
