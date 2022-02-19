@@ -1,3 +1,7 @@
 def solution(a, b):
-    ### YOUR CODE ###
+    for i in b:
+        if i not in a:
+            a.append(i)
+    a.sort()
+    print(a)
     return
