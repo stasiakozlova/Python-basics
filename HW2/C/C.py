@@ -1,3 +1,7 @@
 def solution(arr):
-    ### YOUR CODE ###
-    return
+    new_list = []
+    while arr:
+        new_list = new_list + list(arr.pop(0))
+        arr = list(zip(*arr))
+        arr.reverse()
+    return new_list

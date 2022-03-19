@@ -1,3 +1,9 @@
+from heapq import merge
+
 def solution(a, b):
-    ### YOUR CODE ###
-    return
+    difference = []
+    for i in b:
+        if i not in a:
+            difference.append(i)
+    result = list(merge(a, difference))
+    return result
