@@ -4,9 +4,10 @@ def solution(n):
     x3 = ' /  V  \ '
     x4 = '/(  _  )\\'
     x5 = '  ^^ ^^  '
-    print(x1 * n)
-    print(x2 * n)
-    print(x3 * n)
-    print(x4 * n)
-    print(x5 * n)
-    return
+    line1 = (x1 * n)
+    line2 = (x2 * n)
+    line3 = (x3 * n)
+    line4 = (x4 * n)
+    line5 = (x5 * n)
+    result = f'{line1}\n{line2}\n{line3}\n{line4}\n{line5}'
+    return result

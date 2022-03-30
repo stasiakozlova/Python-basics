@@ -3,5 +3,4 @@ def solution(a, b):
         if i not in a:
             a.append(i)
     a.sort()
-    print(a)
-    return
+    return a

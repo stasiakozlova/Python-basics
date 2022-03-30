@@ -4,5 +4,5 @@ def solution(total):
     minutes = total % 60
     if minutes < 10:
         minutes = '0' + str(minutes)
-    print(f'{hours} {minutes}')
-    return
+    result = f'{hours} {minutes}'
+    return result
