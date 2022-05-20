@@ -1,9 +1,11 @@
 from nltk.tokenize import word_tokenize
 import os
 
-class FileReader():
-    
+
+class FileReader:
     def __init__(self, file):
+        self.line_count = None
+        self.word_count = None
         self.file = file
 
     def read(self):
@@ -14,18 +16,21 @@ class FileReader():
             return ''
 
     def write(self, data):
-        self.write('data')
+        self.write(data)
 
     def count(self):
         with open(self.file) as f:
             line_count = 0
             words = []
+
             for line in f:
                 line_count += 1
+
                 for word in word_tokenize(line):
                     words.append(word)
-            word_count = len(words)
-            return line_count, word_count
+
+            self.word_count = len(words)
+            self.line_count = line_count
 
     def __add__(self, other):
         new_file = self.read() + other.read()
